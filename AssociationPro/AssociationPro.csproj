@@ -1,0 +1,426 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{81A6B9C1-38E3-4898-8EDE-B7145DA0F85B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AssociationPro</RootNamespace>
+    <AssemblyName>AssociationPro</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\hp\Desktop\associations\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>88CFA1FB38659479620CC2281CBF1E0B0B60F6FA</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>AssociationPro_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddPics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPics.Designer.cs">
+      <DependentUpon>AddPics.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssCenterF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssCenterF.Designer.cs">
+      <DependentUpon>AssCenterF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssCenterV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssCenterV.Designer.cs">
+      <DependentUpon>AssCenterV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssConType.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AssConType.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AssConTypeF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssConTypeF.Designer.cs">
+      <DependentUpon>AssConTypeF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssConTypeV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssConTypeV.Designer.cs">
+      <DependentUpon>AssConTypeV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssociationTotalsP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssociationTotalsP.Designer.cs">
+      <DependentUpon>AssociationTotalsP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssociationTotalsV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssociationTotalsV.Designer.cs">
+      <DependentUpon>AssociationTotalsV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CasePrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CasePrint.Designer.cs">
+      <DependentUpon>CasePrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="details.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>details.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DetailsP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetailsP.Designer.cs">
+      <DependentUpon>DetailsP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DetailsV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetailsV.Designer.cs">
+      <DependentUpon>DetailsV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="edit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="edit.Designer.cs">
+      <DependentUpon>edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add.Designer.cs">
+      <DependentUpon>Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssCenter.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AssCenter.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AssociationTotals.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AssociationTotals.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Class1.cs" />
+    <Compile Include="DataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Def.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Def.Designer.cs">
+      <DependentUpon>Def.cs</DependentUpon>
+    </Compile>
+    <Compile Include="emp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="emp.Designer.cs">
+      <DependentUpon>emp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="first.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="first.Designer.cs">
+      <DependentUpon>first.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>mainReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="mainReport_F.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainReport_F.Designer.cs">
+      <DependentUpon>mainReport_F.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mainReport_V.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainReport_V.Designer.cs">
+      <DependentUpon>mainReport_V.cs</DependentUpon>
+    </Compile>
+    <Compile Include="picsprint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="picsprint.Designer.cs">
+      <DependentUpon>picsprint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrintCase.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintCase.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="protocol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="protocol.Designer.cs">
+      <DependentUpon>protocol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports.Designer.cs">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="search.Designer.cs">
+      <DependentUpon>search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="year.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="year.Designer.cs">
+      <DependentUpon>year.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddPics.resx">
+      <DependentUpon>AddPics.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssCenterF.resx">
+      <DependentUpon>AssCenterF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssCenterV.resx">
+      <DependentUpon>AssCenterV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssConType.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AssConType.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssConTypeF.resx">
+      <DependentUpon>AssConTypeF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssConTypeV.resx">
+      <DependentUpon>AssConTypeV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssociationTotalsP.resx">
+      <DependentUpon>AssociationTotalsP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssociationTotalsV.resx">
+      <DependentUpon>AssociationTotalsV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CasePrint.resx">
+      <DependentUpon>CasePrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="details.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>details.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetailsP.resx">
+      <DependentUpon>DetailsP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetailsV.resx">
+      <DependentUpon>DetailsV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="edit.resx">
+      <DependentUpon>edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add.resx">
+      <DependentUpon>Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssCenter.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AssCenter.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssociationTotals.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AssociationTotals.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Def.resx">
+      <DependentUpon>Def.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="emp.resx">
+      <DependentUpon>emp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="first.resx">
+      <DependentUpon>first.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>mainReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainReport_F.resx">
+      <DependentUpon>mainReport_F.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainReport_V.resx">
+      <DependentUpon>mainReport_V.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="picsprint.resx">
+      <DependentUpon>picsprint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrintCase.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PrintCase.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="protocol.resx">
+      <DependentUpon>protocol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports.resx">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="search.resx">
+      <DependentUpon>search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="year.resx">
+      <DependentUpon>year.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="AssociationPro_TemporaryKey.pfx" />
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsc">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSet2.xss">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
