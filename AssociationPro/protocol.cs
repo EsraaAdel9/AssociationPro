@@ -17,6 +17,8 @@ namespace AssociationPro
             InitializeComponent();
         }
         Class1 c = new Class1();
+        string imagepath;
+
         private void protocol_Load(object sender, EventArgs e)
         {
            
@@ -37,7 +39,8 @@ namespace AssociationPro
                 }
                 else
                 {
-                   c.insertProtocal(ComboBox1.Text, dateTimePicker1.Value, int.Parse(textBox1.Text),int.Parse(TextBox4.Text));
+                   c.insertProtocal(ComboBox1.Text, dateTimePicker1.Value, int.Parse(textBox1.Text),int.Parse(TextBox4.Text), pictureBox1.Image);
+                    
                     MessageBox.Show("تم الادخال بنجاح");
                 }
             }
@@ -100,6 +103,24 @@ namespace AssociationPro
             //    dateTimePicker1.Visible = false;
             //    textBox1.Visible = false;
             //}
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    imagepath = openFileDialog1.FileName;
+                    pictureBox1.ImageLocation = openFileDialog1.FileName;
+                    // extension = Path.GetExtension(imagepath);
+                }
+                catch (Exception)
+                {
+                    imagepath = openFileDialog1.FileName;
+                }
+                //button2.Enabled = true;
+            }
         }
     }
 }

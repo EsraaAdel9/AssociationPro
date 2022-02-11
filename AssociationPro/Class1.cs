@@ -238,6 +238,24 @@ namespace AssociationPro
             con.Close();
         }
 
+        public int CheckCaseID(string caseid)
+        {
+            int x = 0;
+            com = new SqlCommand("select count (id)  from cases where case_id=" + caseid, con);
+            com.CommandType = CommandType.Text;
+            // SqlDataAdapter da = new SqlDataAdapter(com);
+            try
+            {
+                con.Open();
+                x = int.Parse(com.ExecuteScalar().ToString());
+                con.Close();
+            }
+            catch
+            {
+                con.Close();
+            }
+            return x;
+        }
 
         public void Insertemp(string emp_name)
         {
@@ -492,9 +510,11 @@ namespace AssociationPro
         }
 
 
-        public void insertProtocal(string assName,DateTime protocolDate,int period,int conNo)
+        public void insertProtocal(string assName,DateTime protocolDate,int period,int conNo, Image image)
         {
-            com = new SqlCommand(" SET DATEFORMAT dmy insert into  [protocol](assName,protocolDate,period,conNo,New) values('" + assName + "','" + protocolDate + "'," + period + ","+conNo+",'true')", con);
+            byte[] bytes = (byte[])(new ImageConverter()).ConvertTo(image, typeof(byte[]));
+            com = new SqlCommand(" SET DATEFORMAT dmy insert into  [protocol](assName,protocolDate,period,conNo,New,image) values('" + assName + "','" + protocolDate + "'," + period + "," + conNo + ",'true',@image)", con);
+            com.Parameters.Add("@image", SqlDbType.VarBinary).Value = bytes;
             com.CommandType = CommandType.Text;
             con.Open();
             com.ExecuteNonQuery();
