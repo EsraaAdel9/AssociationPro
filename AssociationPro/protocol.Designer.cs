@@ -68,7 +68,7 @@
             this.Label1.Location = new System.Drawing.Point(634, 42);
             this.Label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(76, 29);
+            this.Label1.Size = new System.Drawing.Size(74, 29);
             this.Label1.TabIndex = 24;
             this.Label1.Text = "اسم الجمعية";
             // 
@@ -79,7 +79,7 @@
             this.label2.Location = new System.Drawing.Point(572, 280);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(139, 29);
+            this.label2.Size = new System.Drawing.Size(127, 29);
             this.label2.TabIndex = 26;
             this.label2.Text = "تاريخ توقيع البروتوكول";
             // 
@@ -133,7 +133,7 @@
             this.radioButton1.Location = new System.Drawing.Point(587, 222);
             this.radioButton1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(118, 33);
+            this.radioButton1.Size = new System.Drawing.Size(110, 33);
             this.radioButton1.TabIndex = 40;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "بروتوكول جديد";
@@ -214,7 +214,7 @@
             this.label5.Location = new System.Drawing.Point(566, 106);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(144, 29);
+            this.label5.Size = new System.Drawing.Size(132, 29);
             this.label5.TabIndex = 47;
             this.label5.Text = "اضافة صورة البروتوكول";
             // 
@@ -223,7 +223,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(41, 14);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(175, 197);
+            this.pictureBox1.Size = new System.Drawing.Size(174, 211);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 48;
             this.pictureBox1.TabStop = false;

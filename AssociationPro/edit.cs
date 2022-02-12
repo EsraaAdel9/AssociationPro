@@ -33,7 +33,7 @@ namespace AssociationPro
            ComboBox3.Text = dttt.Rows[0][3].ToString().Trim();
            //MessageBox.Show(dttt.Rows[0][4].ToString().Trim());
            comboBox2.Text = dttt.Rows[0][4].ToString();//.Trim();
-           comboBox4.Text = dttt.Rows[0][5].ToString().Trim();
+           comboBox4.Text = dttt.Rows[0]["village"].ToString();
            textBox2.Text = dttt.Rows[0][6].ToString().Trim();
            textBox3.Text = dttt.Rows[0][7].ToString().Trim();
            textBox4.Text = dttt.Rows[0][8].ToString().Trim();
@@ -42,6 +42,7 @@ namespace AssociationPro
            comboBox9.Text = dttt.Rows[0][10].ToString().Trim();
            comboBox8.Text = dttt.Rows[0][11].ToString().Trim();
            comboBox6.Text = dttt.Rows[0][12].ToString().Trim();
+           txt_id.Text = dttt.Rows[0]["case_id"].ToString().Trim();
            if (dttt.Rows[0][12].ToString().Trim() == "محال الى اللجنة")
            {
                comboBox7.Visible = true;
@@ -195,7 +196,7 @@ namespace AssociationPro
                     }
                     if (y == 1)
                     {
-                        c.updateCase(search.id, ComboBox1.Text, TextBox1.Text, ComboBox3.Text, comboBox2.Text, comboBox4.Text, textBox2.Text, float.Parse(textBox3.Text), int.Parse(textBox4.Text), comboBox5.Text, comboBox9.Text, comboBox8.Text, comboBox6.Text, comboBox7.Text, checkBox1.Checked, checkBox2.Checked, textBox5.Text,dateTimePicker1.Value,comboBox10.Text);
+                        c.updateCase(search.id, ComboBox1.Text, TextBox1.Text, ComboBox3.Text, comboBox2.Text, comboBox4.Text, textBox2.Text, float.Parse(textBox3.Text), int.Parse(textBox4.Text), comboBox5.Text, comboBox9.Text, comboBox8.Text, comboBox6.Text, comboBox7.Text, checkBox1.Checked, checkBox2.Checked, textBox5.Text,dateTimePicker1.Value,comboBox10.Text,txt_id.Text);
 
                         if (AddPics.dtt.Rows.Count > 0)
                         {

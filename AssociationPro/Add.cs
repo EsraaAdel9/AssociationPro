@@ -56,6 +56,7 @@ namespace AssociationPro
             checkBox2.Checked = false;
             textBox5.Text = "";
             button3.Visible = false;
+            txt_id.Text = "";
         }
 
         private void comboBox6_SelectedIndexChanged(object sender, EventArgs e)
@@ -65,6 +66,9 @@ namespace AssociationPro
                 label11.Visible = true;
                 comboBox7.Visible = true;
                 button3.Visible = true;
+                label11.Visible = false;
+                comboBox7.Visible = false;
+                comboBox7.SelectedIndex = -1;
 
                 //if (comboBox5.SelectedIndex== 0)
                 //{
@@ -81,12 +85,23 @@ namespace AssociationPro
                 //    label15.Text = " تم السماح بعمل عدد " + c.count(ComboBox1.Text, "مياه").ToString() + " توصيلة بقرار اللجنة من اصل " + c.waterNo(ComboBox1.Text) + "توصيلة مياه\r\nكما تم السماح بعمل عدد" + c.count(ComboBox1.Text, "صرف").ToString() + " توصيلة بقرار اللجنة من اصل " + c.sewerNo(ComboBox1.Text) + "توصيلة صرف";
                 //}
             }
+
+            else if (comboBox6.SelectedIndex == 1)
+            {
+                label19.Visible = true;
+                comboBox10.Visible = true;
+                button2.Visible = true; 
+            }
             else
             {
                 label11.Visible = false;
                 comboBox7.Visible = false;
                 comboBox7.SelectedIndex = -1;
-               
+                button3.Visible = false;
+                label19.Visible = false;
+                comboBox10.Visible = false;
+                button2.Visible = false;
+                comboBox10.SelectedIndex = -1;
             }
         }
         int y=0;
@@ -147,7 +162,7 @@ namespace AssociationPro
                         {
                             if (c.CheckCaseID(txt_id.Text) == 0)
                             {
-                                int id = c.InsertCase(ComboBox1.Text, TextBox1.Text, ComboBox3.Text, comboBox2.Text, comboBox4.Text, textBox2.Text, float.Parse(textBox3.Text), int.Parse(textBox4.Text), comboBox5.Text, comboBox9.Text, comboBox8.Text, comboBox6.Text, comboBox7.Text, checkBox1.Checked, checkBox2.Checked, textBox5.Text, dateTimePicker1.Value, comboBox10.Text);
+                                int id = c.InsertCase(ComboBox1.Text, TextBox1.Text, ComboBox3.Text, comboBox2.Text, comboBox4.Text, textBox2.Text, float.Parse(textBox3.Text), int.Parse(textBox4.Text), comboBox5.Text, comboBox9.Text, comboBox8.Text, comboBox6.Text, comboBox7.Text, checkBox1.Checked, checkBox2.Checked, textBox5.Text, dateTimePicker1.Value, comboBox10.Text,txt_id.Text);
                                 if (AddPics.dtt.Rows.Count > 0)
                                 {
                                     foreach (DataRow dr in AddPics.dtt.Rows)

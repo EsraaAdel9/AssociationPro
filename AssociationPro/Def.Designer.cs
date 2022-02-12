@@ -54,20 +54,20 @@
             // 
             this.Label8.AutoSize = true;
             this.Label8.Font = new System.Drawing.Font("Traditional Arabic", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label8.Location = new System.Drawing.Point(199, 16);
+            this.Label8.Location = new System.Drawing.Point(171, 13);
             this.Label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Label8.Name = "Label8";
-            this.Label8.Size = new System.Drawing.Size(138, 42);
+            this.Label8.Size = new System.Drawing.Size(113, 34);
             this.Label8.TabIndex = 31;
             this.Label8.Text = "تعريف الجمعيات";
             // 
             // Button1
             // 
             this.Button1.Font = new System.Drawing.Font("Traditional Arabic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button1.Location = new System.Drawing.Point(246, 572);
+            this.Button1.Location = new System.Drawing.Point(211, 465);
             this.Button1.Margin = new System.Windows.Forms.Padding(2);
             this.Button1.Name = "Button1";
-            this.Button1.Size = new System.Drawing.Size(122, 47);
+            this.Button1.Size = new System.Drawing.Size(105, 38);
             this.Button1.TabIndex = 30;
             this.Button1.Text = "حفظ";
             this.Button1.UseVisualStyleBackColor = true;
@@ -76,30 +76,30 @@
             // TextBox3
             // 
             this.TextBox3.Font = new System.Drawing.Font("Traditional Arabic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBox3.Location = new System.Drawing.Point(71, 474);
+            this.TextBox3.Location = new System.Drawing.Point(61, 385);
             this.TextBox3.Margin = new System.Windows.Forms.Padding(2);
             this.TextBox3.Name = "TextBox3";
-            this.TextBox3.Size = new System.Drawing.Size(250, 43);
+            this.TextBox3.Size = new System.Drawing.Size(215, 36);
             this.TextBox3.TabIndex = 28;
             // 
             // Label6
             // 
             this.Label6.AutoSize = true;
             this.Label6.Font = new System.Drawing.Font("Traditional Arabic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label6.Location = new System.Drawing.Point(325, 477);
+            this.Label6.Location = new System.Drawing.Point(279, 388);
             this.Label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Label6.Name = "Label6";
-            this.Label6.Size = new System.Drawing.Size(209, 37);
+            this.Label6.Size = new System.Drawing.Size(169, 29);
             this.Label6.TabIndex = 26;
             this.Label6.Text = "اسم رئيس مجلس ادارة الجمعية";
             // 
             // TextBox2
             // 
             this.TextBox2.Font = new System.Drawing.Font("Traditional Arabic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBox2.Location = new System.Drawing.Point(71, 309);
+            this.TextBox2.Location = new System.Drawing.Point(61, 251);
             this.TextBox2.Margin = new System.Windows.Forms.Padding(2);
             this.TextBox2.Name = "TextBox2";
-            this.TextBox2.Size = new System.Drawing.Size(336, 43);
+            this.TextBox2.Size = new System.Drawing.Size(289, 36);
             this.TextBox2.TabIndex = 25;
             // 
             // ComboBox3
@@ -107,10 +107,10 @@
             this.ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboBox3.Font = new System.Drawing.Font("Traditional Arabic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ComboBox3.FormattingEnabled = true;
-            this.ComboBox3.Location = new System.Drawing.Point(71, 250);
+            this.ComboBox3.Location = new System.Drawing.Point(61, 203);
             this.ComboBox3.Margin = new System.Windows.Forms.Padding(2);
             this.ComboBox3.Name = "ComboBox3";
-            this.ComboBox3.Size = new System.Drawing.Size(336, 44);
+            this.ComboBox3.Size = new System.Drawing.Size(289, 37);
             this.ComboBox3.TabIndex = 24;
             // 
             // ComboBox2
@@ -148,10 +148,10 @@
             "قنا",
             "كفر الشيخ",
             "مطروح"});
-            this.ComboBox2.Location = new System.Drawing.Point(71, 193);
+            this.ComboBox2.Location = new System.Drawing.Point(61, 157);
             this.ComboBox2.Margin = new System.Windows.Forms.Padding(2);
             this.ComboBox2.Name = "ComboBox2";
-            this.ComboBox2.Size = new System.Drawing.Size(336, 44);
+            this.ComboBox2.Size = new System.Drawing.Size(289, 37);
             this.ComboBox2.TabIndex = 23;
             this.ComboBox2.SelectedIndexChanged += new System.EventHandler(this.ComboBox2_SelectedIndexChanged);
             // 
@@ -163,20 +163,20 @@
             this.ComboBox1.Items.AddRange(new object[] {
             "جمعية اهلية",
             "مؤسسة"});
-            this.ComboBox1.Location = new System.Drawing.Point(71, 134);
+            this.ComboBox1.Location = new System.Drawing.Point(61, 109);
             this.ComboBox1.Margin = new System.Windows.Forms.Padding(2);
             this.ComboBox1.Name = "ComboBox1";
-            this.ComboBox1.Size = new System.Drawing.Size(336, 44);
+            this.ComboBox1.Size = new System.Drawing.Size(289, 37);
             this.ComboBox1.TabIndex = 22;
             // 
             // Label5
             // 
             this.Label5.AutoSize = true;
             this.Label5.Font = new System.Drawing.Font("Traditional Arabic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label5.Location = new System.Drawing.Point(437, 309);
+            this.Label5.Location = new System.Drawing.Point(375, 251);
             this.Label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Label5.Name = "Label5";
-            this.Label5.Size = new System.Drawing.Size(59, 37);
+            this.Label5.Size = new System.Drawing.Size(49, 29);
             this.Label5.TabIndex = 20;
             this.Label5.Text = "العنوان";
             // 
@@ -184,10 +184,10 @@
             // 
             this.Label4.AutoSize = true;
             this.Label4.Font = new System.Drawing.Font("Traditional Arabic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label4.Location = new System.Drawing.Point(437, 256);
+            this.Label4.Location = new System.Drawing.Point(375, 208);
             this.Label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Label4.Name = "Label4";
-            this.Label4.Size = new System.Drawing.Size(49, 37);
+            this.Label4.Size = new System.Drawing.Size(40, 29);
             this.Label4.TabIndex = 19;
             this.Label4.Text = "المركز";
             // 
@@ -195,10 +195,10 @@
             // 
             this.Label3.AutoSize = true;
             this.Label3.Font = new System.Drawing.Font("Traditional Arabic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label3.Location = new System.Drawing.Point(439, 196);
+            this.Label3.Location = new System.Drawing.Point(376, 159);
             this.Label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Label3.Name = "Label3";
-            this.Label3.Size = new System.Drawing.Size(63, 37);
+            this.Label3.Size = new System.Drawing.Size(49, 29);
             this.Label3.TabIndex = 18;
             this.Label3.Text = "المحافظة";
             // 
@@ -206,10 +206,10 @@
             // 
             this.Label2.AutoSize = true;
             this.Label2.Font = new System.Drawing.Font("Traditional Arabic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label2.Location = new System.Drawing.Point(437, 134);
+            this.Label2.Location = new System.Drawing.Point(375, 109);
             this.Label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(47, 37);
+            this.Label2.Size = new System.Drawing.Size(38, 29);
             this.Label2.TabIndex = 17;
             this.Label2.Text = "النوع";
             // 
@@ -217,10 +217,10 @@
             // 
             this.Label1.AutoSize = true;
             this.Label1.Font = new System.Drawing.Font("Traditional Arabic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label1.Location = new System.Drawing.Point(427, 82);
+            this.Label1.Location = new System.Drawing.Point(366, 67);
             this.Label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(92, 37);
+            this.Label1.Size = new System.Drawing.Size(74, 29);
             this.Label1.TabIndex = 16;
             this.Label1.Text = "اسم الجمعية";
             // 
@@ -228,10 +228,9 @@
             // 
             this.comboBox4.Font = new System.Drawing.Font("Traditional Arabic", 14F, System.Drawing.FontStyle.Bold);
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(71, 73);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.comboBox4.Location = new System.Drawing.Point(61, 59);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(334, 44);
+            this.comboBox4.Size = new System.Drawing.Size(287, 37);
             this.comboBox4.TabIndex = 32;
             this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             this.comboBox4.TextChanged += new System.EventHandler(this.comboBox4_TextChanged);
@@ -239,10 +238,9 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Traditional Arabic", 14F, System.Drawing.FontStyle.Bold);
-            this.button2.Location = new System.Drawing.Point(113, 572);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button2.Location = new System.Drawing.Point(97, 465);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(117, 47);
+            this.button2.Size = new System.Drawing.Size(100, 38);
             this.button2.TabIndex = 33;
             this.button2.Text = "حذف";
             this.button2.UseVisualStyleBackColor = true;
@@ -252,50 +250,50 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Traditional Arabic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(72, 364);
+            this.textBox1.Location = new System.Drawing.Point(62, 296);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(336, 43);
+            this.textBox1.Size = new System.Drawing.Size(289, 36);
             this.textBox1.TabIndex = 35;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Traditional Arabic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(424, 364);
+            this.label9.Location = new System.Drawing.Point(363, 296);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(94, 37);
+            this.label9.Size = new System.Drawing.Size(75, 29);
             this.label9.TabIndex = 34;
             this.label9.Text = "اسم المفوض";
             // 
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("Traditional Arabic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(73, 420);
+            this.textBox5.Location = new System.Drawing.Point(63, 341);
             this.textBox5.Margin = new System.Windows.Forms.Padding(2);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(336, 43);
+            this.textBox5.Size = new System.Drawing.Size(289, 36);
             this.textBox5.TabIndex = 37;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Traditional Arabic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(426, 420);
+            this.label10.Location = new System.Drawing.Point(365, 341);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(84, 37);
+            this.label10.Size = new System.Drawing.Size(67, 29);
             this.label10.TabIndex = 36;
             this.label10.Text = "رقم الهاتف";
             // 
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Traditional Arabic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(246, 572);
+            this.button3.Location = new System.Drawing.Point(211, 465);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(122, 47);
+            this.button3.Size = new System.Drawing.Size(105, 38);
             this.button3.TabIndex = 38;
             this.button3.Text = "تعديل";
             this.button3.UseVisualStyleBackColor = true;
@@ -304,16 +302,15 @@
             // 
             // Def
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(546, 666);
+            this.ClientSize = new System.Drawing.Size(468, 541);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.Label8);
             this.Controls.Add(this.Button1);
@@ -328,6 +325,7 @@
             this.Controls.Add(this.Label3);
             this.Controls.Add(this.Label2);
             this.Controls.Add(this.Label1);
+            this.Controls.Add(this.button2);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Def";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;

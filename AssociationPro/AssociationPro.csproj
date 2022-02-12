@@ -48,10 +48,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>6C378CF9AAFC11758EFF91378B58BFB287F7CF60</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>0692E3B051B7DB27846E1FACEB769CC60DBE260D</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>AssociationPro_1_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>AssociationPro_2_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -360,6 +360,7 @@
       <DependentUpon>year.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="AssociationPro_1_TemporaryKey.pfx" />
+    <None Include="AssociationPro_2_TemporaryKey.pfx" />
     <None Include="AssociationPro_TemporaryKey.pfx" />
     <None Include="DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>

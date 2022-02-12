@@ -64,6 +64,7 @@ namespace AssociationPro
             textBox1.Text = "";
             textBox2.Text="";
             TextBox4.Text="";
+            pictureBox1.Image = null;
             radioButton1.Checked=true;
 
 

@@ -18,7 +18,7 @@ namespace AssociationPro
         DataTable dt;
         public DataTable centers(string gov)
         {
-            com = new SqlCommand("select center from gov_center where gov='"+gov+"'", con);
+            com = new SqlCommand("select center from gov_center where gov=N'"+gov+"'", con);
             com.CommandType = CommandType.Text;
             SqlDataAdapter da = new SqlDataAdapter(com);
             try
@@ -50,7 +50,7 @@ namespace AssociationPro
         }
         public DataTable sections(string center)
         {
-            com = new SqlCommand("select distinct section from Center_Section_Village where center='" + center + "'", con);
+            com = new SqlCommand("select distinct section from Center_Section_Village where center=N'" + center + "'", con);
             com.CommandType = CommandType.Text;
             SqlDataAdapter da = new SqlDataAdapter(com);
             try
@@ -68,7 +68,7 @@ namespace AssociationPro
 
         public DataTable village(string section)
         {
-            com = new SqlCommand("select distinct village from Center_Section_Village where section='" + section + "'", con);
+            com = new SqlCommand("select distinct village from Center_Section_Village where section=N'" + section + "'", con);
             com.CommandType = CommandType.Text;
             SqlDataAdapter da = new SqlDataAdapter(com);
             try
@@ -103,7 +103,7 @@ namespace AssociationPro
         public int count2(string assname)
         {
             int x = 0;
-            com = new SqlCommand("select count (id)  from cases where [ass_name]='" + assname + "' and [comm_decision]='مقبولة' and con_type='مياه وصرف'", con);
+            com = new SqlCommand("select count (id)  from cases where [ass_name]=N'" + assname + "' and [comm_decision]='مقبولة' and con_type='مياه وصرف'", con);
             com.CommandType = CommandType.Text;
             // SqlDataAdapter da = new SqlDataAdapter(com);
             try
@@ -122,7 +122,7 @@ namespace AssociationPro
         public int count(string assname,string type)
         {
             int x=0;
-            com = new SqlCommand("select count (id)  from cases where [ass_name]='" + assname + "' and [comm_decision]='مقبولة' and (con_type='مياه' or con_type='صرف' )", con);
+            com = new SqlCommand("select count (id)  from cases where [ass_name]=N'" + assname + "' and [comm_decision]='مقبولة' and (con_type='مياه' or con_type='صرف' )", con);
             com.CommandType = CommandType.Text;
            // SqlDataAdapter da = new SqlDataAdapter(com);
             try
@@ -140,7 +140,7 @@ namespace AssociationPro
         public int waterNo(string assname)
         {
             int x = 0;
-            com = new SqlCommand("select [ConNo]  from def where [name]='" + assname + "' ", con);
+            com = new SqlCommand("select [ConNo]  from def where [name]=N'" + assname + "' ", con);
             com.CommandType = CommandType.Text;
             // SqlDataAdapter da = new SqlDataAdapter(com);
             try
@@ -162,7 +162,7 @@ namespace AssociationPro
         public int sewerNo(string assname)
         {
             int x = 0;
-            com = new SqlCommand("select sewerNo  from def where [name]='" + assname + "' ", con); 
+            com = new SqlCommand("select sewerNo  from def where [name]=N '" + assname + "' ", con); 
             com.CommandType = CommandType.Text;
             // SqlDataAdapter da = new SqlDataAdapter(com);
             try
@@ -182,15 +182,15 @@ namespace AssociationPro
 
         public void InsertAssociaton(string name, string type, string gov, string center, string street, string chairman, string authorized, string phone_no)
         {
-            com = new SqlCommand(" INSERT INTO [associations].[dbo].[Def]([name],[type],[gov] ,[center] ,[street] ,[chairman],[authorized],[phone_no]) values('" + name + "','" + type + "','" + gov + "','" + center + "','" + street + "','" + chairman + "','" + authorized + "','" + phone_no + "')", con);
+            com = new SqlCommand(" INSERT INTO [associations].[dbo].[Def]([name],[type],[gov] ,[center] ,[street] ,[chairman],[authorized],[phone_no]) values(N'" + name + "',N'" + type + "',N'" + gov + "',N'" + center + "',N'" + street + "',N'" + chairman + "',N'" + authorized + "','" + phone_no + "')", con);
             com.CommandType = CommandType.Text;
             con.Open();
             com.ExecuteNonQuery();
             con.Close();
         }
-        public int InsertCase(string ass_name, string case_name, string center, string section, string village, string street, float area, int no_floors, string con_type, string F_emp, string S_emp, string decision, string comm_decision, bool Rec, bool paid, string account, DateTime scanDate,string reason)
+        public int InsertCase(string ass_name, string case_name, string center, string section, string village, string street, float area, int no_floors, string con_type, string F_emp, string S_emp, string decision, string comm_decision, bool Rec, bool paid, string account, DateTime scanDate,string reason,string txtID)
         {
-            com = new SqlCommand("SET DATEFORMAT dmy  INSERT INTO [associations].[dbo].[cases]([ass_name],[case_name],[center],[section],[village],[street],[area],[no_floors],[con_type],[F_emp],[S_emp],[decision],[comm_decision],Recommended,paid,account_no,scanDate,commRefuseReason) values('" + ass_name + "','" + case_name + "','" + center + "','" + section + "','" + village + "','" + street + "'," + area + "," + no_floors + ",'" + con_type + "','" + F_emp + "','" + S_emp + "','" + decision + "','" + comm_decision + "','" + Rec + "','" + paid + "','" + account + "','" + scanDate + "','" + reason + "')  SELECT SCOPE_IDENTITY()", con);
+            com = new SqlCommand("SET DATEFORMAT dmy  INSERT INTO [associations].[dbo].[cases]([ass_name],[case_name],[center],[section],[village],[street],[area],[no_floors],[con_type],[F_emp],[S_emp],[decision],[comm_decision],Recommended,paid,account_no,scanDate,commRefuseReason,case_id) values(N'" + ass_name + "',N'" + case_name + "',N'" + center + "',N'" + section + "',N'" + village + "','" + street + "'," + area + "," + no_floors + ",N'" + con_type + "',N'" + F_emp + "',N'" + S_emp + "',N'" + decision + "','" + comm_decision + "','" + Rec + "','" + paid + "','" + account + "','" + scanDate + "',N'" + reason + "','" + txtID + "')  SELECT SCOPE_IDENTITY()", con);
             com.CommandType = CommandType.Text;
             con.Open();
             int x= int.Parse(com.ExecuteScalar().ToString());
@@ -210,9 +210,9 @@ namespace AssociationPro
         }
 
 
-        public void updateCase(int id, string ass_name, string case_name, string center, string section, string village, string street, float area, int no_floors, string con_type, string F_emp, string S_emp, string decision, string comm_decision, bool Rec, bool paid, string account, DateTime scanDate, string commRefuseReason)
+        public void updateCase(int id, string ass_name, string case_name, string center, string section, string village, string street, float area, int no_floors, string con_type, string F_emp, string S_emp, string decision, string comm_decision, bool Rec, bool paid, string account, DateTime scanDate, string commRefuseReason,string txtid)
         {
-            com = new SqlCommand(" update [cases]  set [ass_name]='" + ass_name + "',[case_name]='" + case_name + "',[center]='" + center + "',[section]='" + section + "',[village]='" + village + "',[street]='" + street + "',[area]='" + area + "',[no_floors]='" + no_floors + "',[con_type]='" + con_type + "',[F_emp]='" + F_emp + "',[S_emp]='" + S_emp + "',[decision]='" + decision + "',[comm_decision]='" + comm_decision + "',Recommended='" + Rec + "',paid='" + paid + "',account_no='" + account + "', scanDate='" + scanDate + "',commRefuseReason='"+commRefuseReason+"' where id=" + id, con);
+            com = new SqlCommand(" update [cases]  set [ass_name]=N'" + ass_name + "',[case_name]=N'" + case_name + "',[center]=N'" + center + "',[section]=N'" + section + "',[village]=N'" + village + "',[street]=N'" + street + "',[area]=N'" + area + "',[no_floors]='" + no_floors + "',[con_type]=N'" + con_type + "',[F_emp]=N'" + F_emp + "',[S_emp]=N'" + S_emp + "',[decision]=N'" + decision + "',[comm_decision]=N'" + comm_decision + "',Recommended='" + Rec + "',paid='" + paid + "',account_no='" + account + "', scanDate='" + scanDate + "',commRefuseReason='"+commRefuseReason+ "',case_id='" + txtid + "' where id=" + id, con);
             com.CommandType = CommandType.Text;
             con.Open();
             com.ExecuteNonQuery();
@@ -221,7 +221,7 @@ namespace AssociationPro
 
         public void updateAss(string name,string type,string gov,string center,string street,string chairman ,string authorized,string phone_no )
         {
-            com = new SqlCommand(" update [Def]  SET [type] ='" + type + "',[gov] = '" + gov + "',[center] = '" + center + "',[street] = '" + street + "',[chairman] = " + chairman + ",[authorized] = '" + authorized + "',[phone_no] ='" + phone_no + "' where name='" + name + "'", con);
+            com = new SqlCommand(" update [Def]  SET type = N'" + type + "' , gov =N'" + gov + "', center = N'" + center + "' ,street = N'" + street + "' ,chairman = N'" + chairman + "',authorized = N'" + authorized + "' ,[phone_no] ='" + phone_no + "' where name= N'" + name + "'", con);
             com.CommandType = CommandType.Text;
             con.Open();
             com.ExecuteNonQuery();
@@ -259,7 +259,7 @@ namespace AssociationPro
 
         public void Insertemp(string emp_name)
         {
-            com = new SqlCommand(" INSERT INTO emp(emp) values('" + emp_name + "')", con);
+            com = new SqlCommand(" INSERT INTO emp(emp) values(N'" + emp_name + "')", con);
             com.CommandType = CommandType.Text;
             con.Open();
             com.ExecuteNonQuery();
@@ -341,7 +341,7 @@ namespace AssociationPro
         public DataTable selectImage_case2(int Cid,int type)
         {
             string a;
-            com = new SqlCommand("select image_id from image_case where  case_id=" + Cid+" and type="+type, con);
+            com = new SqlCommand("select image_id from image_case where  case_id=" + Cid+" and type=N"+type, con);
             com.CommandType = CommandType.Text;
             SqlDataAdapter da = new SqlDataAdapter(com);
             try
@@ -358,7 +358,7 @@ namespace AssociationPro
 
         public DataTable getAssData(string name)
         {
-            com = new SqlCommand("select *  from Def where name='" + name + "'", con);
+            com = new SqlCommand("select *  from Def where name=N'" + name + "'", con);
             com.CommandType = CommandType.Text;
             SqlDataAdapter da = new SqlDataAdapter(com);
             try
@@ -392,7 +392,7 @@ namespace AssociationPro
 
         public void deleteAss(string name)
         {
-            com = new SqlCommand("delete from Def where name='"+name+"'", con);
+            com = new SqlCommand("delete from Def where name=N'"+name+"'", con);
             com.CommandType = CommandType.Text;
             con.Open();
             com.ExecuteNonQuery();
@@ -402,7 +402,7 @@ namespace AssociationPro
 
         public DataTable search(string type, string sh1)
         {
-            com = new SqlCommand("select * from cases where " + type + " like'%" + sh1 + "%'", con);
+            com = new SqlCommand("select * from cases where " + type + "  like N'%" + sh1 + "%'", con);
             com.CommandType = CommandType.Text;
             con.Open();
             da = new SqlDataAdapter(com);
@@ -413,7 +413,7 @@ namespace AssociationPro
         }
         public DataTable orand(string type, string sh1, string sh2, string sh3)
         {
-            com = new SqlCommand("select * from cases where " + type + " like'%" + sh1 + "%' or  " + type + " like'%" + sh2 + "%' and  " + type + " like'%" + sh3 + "%'", con);
+            com = new SqlCommand("select * from cases where " + type + " like N'%" + sh1 + "%' or  " + type + " like N '%" + sh2 + "%' and  " + type + " like N '%" + sh3 + "%'", con);
             com.CommandType = CommandType.Text;
             con.Open();
             da = new SqlDataAdapter(com);
@@ -424,7 +424,7 @@ namespace AssociationPro
         }
         public DataTable andor(string type, string sh1, string sh2, string sh3)
         {
-            com = new SqlCommand("select * from cases where " + type + " like'%" + sh1 + "%' and  " + type + " like'%" + sh2 + "%' or  " + type + " like'%" + sh3 + "%'", con);
+            com = new SqlCommand("select * from cases where " + type + " like N '%" + sh1 + "%' and  " + type + " like N '%" + sh2 + "%' or  " + type + " like N'%" + sh3 + "%'", con);
             com.CommandType = CommandType.Text;
             con.Open();
             da = new SqlDataAdapter(com);
@@ -435,7 +435,7 @@ namespace AssociationPro
         }
         public DataTable andand(string type, string sh1, string sh2, string sh3)
         {
-            com = new SqlCommand("select * from cases where " + type + " like'%" + sh1 + "%' and  " + type + " like'%" + sh2 + "%' and  " + type + " like'%" + sh3 + "%'", con);
+            com = new SqlCommand("select * from cases where " + type + " like N'%" + sh1 + "%' and  " + type + " like N'%" + sh2 + "%' and  " + type + " like N'%" + sh3 + "%'", con);
             com.CommandType = CommandType.Text;
             con.Open();
             da = new SqlDataAdapter(com);
@@ -446,7 +446,7 @@ namespace AssociationPro
         }
         public DataTable or(string type, string sh1, string sh2)
         {
-            com = new SqlCommand("select * from cases where " + type + " like'%" + sh1 + "%' or  " + type + " like'%" + sh2 + "%'", con);
+            com = new SqlCommand("select * from cases where " + type + " like N'%" + sh1 + "%' or  " + type + " like N'%" + sh2 + "%'", con);
             com.CommandType = CommandType.Text;
             con.Open();
             da = new SqlDataAdapter(com);
@@ -457,7 +457,7 @@ namespace AssociationPro
         }
         public DataTable and(string type, string sh1, string sh2)
         {
-            com = new SqlCommand("select * from cases where " + type + " like'%" + sh1 + "%' and  " + type + " like'%" + sh2 + "%'", con);
+            com = new SqlCommand("select * from cases where " + type + " like N'%" + sh1 + "%' and  " + type + " like N'%" + sh2 + "%'", con);
             com.CommandType = CommandType.Text;
             con.Open();
             da = new SqlDataAdapter(com);
@@ -468,7 +468,7 @@ namespace AssociationPro
         }
         public DataTable oror(string type, string sh1, string sh2, string sh3)
         {
-            com = new SqlCommand("select * from cases where " + type + "like'%" + sh1 + "%' or  " + type + " like'%" + sh2 + "%' or  " + type + " like'%" + sh3 + "%'", con);
+            com = new SqlCommand("select * from cases where " + type + " like N'%" + sh1 + "%' or  " + type + " like N'%" + sh2 + "%' or  " + type + " like N'%" + sh3 + "%'", con);
             com.CommandType = CommandType.Text;
             con.Open();
             da = new SqlDataAdapter(com);
@@ -513,7 +513,7 @@ namespace AssociationPro
         public void insertProtocal(string assName,DateTime protocolDate,int period,int conNo, Image image)
         {
             byte[] bytes = (byte[])(new ImageConverter()).ConvertTo(image, typeof(byte[]));
-            com = new SqlCommand(" SET DATEFORMAT dmy insert into  [protocol](assName,protocolDate,period,conNo,New,image) values('" + assName + "','" + protocolDate + "'," + period + "," + conNo + ",'true',@image)", con);
+            com = new SqlCommand(" SET DATEFORMAT dmy insert into  [protocol](assName,protocolDate,period,conNo,New,image) values( N'" + assName + "','" + protocolDate + "'," + period + "," + conNo + ",'true',@image)", con);
             com.Parameters.Add("@image", SqlDbType.VarBinary).Value = bytes;
             com.CommandType = CommandType.Text;
             con.Open();
@@ -541,7 +541,7 @@ namespace AssociationPro
 
         public int selectprotocol(string assName, int period)
         {
-            com = new SqlCommand(" select id from [protocol]  where assName='" + assName + "' and protocolDate in (SELECT MAX(protocolDate)  FROM [protocol] where assName='" + assName + "')  ", con);
+            com = new SqlCommand(" select id from [protocol]  where assName= N '" + assName + "' and protocolDate in (SELECT MAX(protocolDate)  FROM [protocol] where assName= N'" + assName + "')  ", con);
             com.CommandType = CommandType.Text;
             con.Open();
             int id=int.Parse(com.ExecuteScalar().ToString());

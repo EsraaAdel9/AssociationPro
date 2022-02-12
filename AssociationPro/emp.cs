@@ -27,6 +27,7 @@ namespace AssociationPro
             {
                 c.Insertemp(textBox1.Text);
                 MessageBox.Show("تم الادخال بنجاح");
+                textBox1.Text = "";
             }
         }
     }

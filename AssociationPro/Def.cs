@@ -56,9 +56,9 @@ namespace AssociationPro
         private void Def_Load(object sender, EventArgs e)
         {
            
-            ComboBox1.SelectedIndex = 1;
-            ComboBox2.SelectedIndex = 11;
-            ComboBox3.SelectedIndex = 1;
+            //ComboBox1.SelectedIndex = 1;
+            //ComboBox2.SelectedIndex = 11;
+            //ComboBox3.SelectedIndex = 1;
 
             DataTable dt1 = new DataTable();
             dt1 = c.getAssNames();
@@ -149,7 +149,8 @@ namespace AssociationPro
                             comboBox4.Items.Add(dr[0].ToString());
                         }
                         comboBox4.SelectedIndex = -1;
-                      //  comboBox4_SelectedIndexChanged(sender, e);
+                        //  comboBox4_SelectedIndexChanged(sender, e);
+
                     }
                    
                 }

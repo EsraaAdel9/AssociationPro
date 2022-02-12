@@ -105,8 +105,9 @@ namespace AssociationPro
         {
             if (MessageBox.Show("هل انت متأكد من الحذف؟", "تحذير", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                a.deleteCase(id);
+                a.deleteCase(id);               
                 MessageBox.Show("تم الحذف بنجاح");
+                button1.PerformClick();
             }
         }
 
@@ -143,6 +144,11 @@ namespace AssociationPro
         {
             picsprint p = new picsprint();
             p.Show();
+        }
+
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
