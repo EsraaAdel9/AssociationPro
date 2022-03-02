@@ -27,7 +27,6 @@ namespace AssociationPro
             {
                 ComboBox3.Items.Add(dr[0]);
             }
-
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -38,7 +37,7 @@ namespace AssociationPro
             }
             else
             {
-                c.InsertAssociaton(comboBox4.Text, ComboBox1.Text, ComboBox2.Text, ComboBox3.Text, TextBox2.Text, TextBox3.Text, textBox1.Text,textBox5.Text);
+                c.InsertAssociaton(comboBox4.Text, ComboBox1.Text, ComboBox2.Text, ComboBox3.Text, TextBox2.Text, TextBox3.Text, textBox1.Text,textBox5.Text,txt_note.Text);
                 MessageBox.Show("تم الادخال بنجاح");
                 comboBox4.Text = "";
                 comboBox4.Items.Clear();
@@ -80,7 +79,8 @@ namespace AssociationPro
             textBox5.Text = dt.Rows[0][9].ToString();
             TextBox2.Text = dt.Rows[0][5].ToString();
             TextBox3.Text = dt.Rows[0][6].ToString();
-           
+            txt_note.Text = dt.Rows[0]["note"].ToString();
+
             if (dt.Rows.Count > 0)
             {
                 button2.Visible = true;
@@ -99,15 +99,15 @@ namespace AssociationPro
         {
             //if (comboBox4.Text == "")
             //{
-                button2.Visible = false;
-                clear();
-                try
-                {
-                    comboBox4_SelectedIndexChanged(sender, e);
-                }
-                catch (Exception)
-                {
-                }
+            button2.Visible = false;
+            clear();
+            try
+            {
+                comboBox4_SelectedIndexChanged(sender, e);
+            }
+            catch (Exception)
+            {
+            }
             //}
         }
 
@@ -119,7 +119,7 @@ namespace AssociationPro
             ComboBox3.SelectedIndex = -1;
             TextBox2.Text = "";
             TextBox3.Text = "";
-           
+            txt_note.Text = "";
             textBox1.Text = "";
             textBox5.Text = "";  
 
@@ -149,8 +149,7 @@ namespace AssociationPro
                             comboBox4.Items.Add(dr[0].ToString());
                         }
                         comboBox4.SelectedIndex = -1;
-                        //  comboBox4_SelectedIndexChanged(sender, e);
-
+                      //  comboBox4_SelectedIndexChanged(sender, e);
                     }
                    
                 }
@@ -169,7 +168,7 @@ namespace AssociationPro
             }
             else
             {
-                c.updateAss(comboBox4.Text, ComboBox1.Text, ComboBox2.Text, ComboBox3.Text, TextBox2.Text, TextBox3.Text,textBox1.Text, textBox5.Text);
+                c.updateAss(comboBox4.Text, ComboBox1.Text, ComboBox2.Text, ComboBox3.Text, TextBox2.Text, TextBox3.Text,textBox1.Text, textBox5.Text, txt_note.Text);
                 MessageBox.Show("تم التعديل بنجاح");
                 comboBox4.Text = "";
                 comboBox4.Items.Clear();

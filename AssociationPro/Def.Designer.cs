@@ -48,6 +48,8 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
+            this.txt_note = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Label8
@@ -64,7 +66,7 @@
             // Button1
             // 
             this.Button1.Font = new System.Drawing.Font("Traditional Arabic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Button1.Location = new System.Drawing.Point(211, 465);
+            this.Button1.Location = new System.Drawing.Point(211, 505);
             this.Button1.Margin = new System.Windows.Forms.Padding(2);
             this.Button1.Name = "Button1";
             this.Button1.Size = new System.Drawing.Size(105, 38);
@@ -238,7 +240,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Traditional Arabic", 14F, System.Drawing.FontStyle.Bold);
-            this.button2.Location = new System.Drawing.Point(97, 465);
+            this.button2.Location = new System.Drawing.Point(97, 505);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(100, 38);
             this.button2.TabIndex = 33;
@@ -250,10 +252,10 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Traditional Arabic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(62, 296);
+            this.textBox1.Location = new System.Drawing.Point(61, 296);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(289, 36);
+            this.textBox1.Size = new System.Drawing.Size(290, 36);
             this.textBox1.TabIndex = 35;
             // 
             // label9
@@ -270,10 +272,10 @@
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("Traditional Arabic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(63, 341);
+            this.textBox5.Location = new System.Drawing.Point(61, 341);
             this.textBox5.Margin = new System.Windows.Forms.Padding(2);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(289, 36);
+            this.textBox5.Size = new System.Drawing.Size(291, 36);
             this.textBox5.TabIndex = 37;
             // 
             // label10
@@ -290,7 +292,7 @@
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Traditional Arabic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(211, 465);
+            this.button3.Location = new System.Drawing.Point(211, 505);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(105, 38);
@@ -300,20 +302,42 @@
             this.button3.Visible = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
+            // txt_note
+            // 
+            this.txt_note.Font = new System.Drawing.Font("Traditional Arabic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_note.Location = new System.Drawing.Point(61, 430);
+            this.txt_note.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_note.Multiline = true;
+            this.txt_note.Name = "txt_note";
+            this.txt_note.Size = new System.Drawing.Size(291, 69);
+            this.txt_note.TabIndex = 40;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Traditional Arabic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(365, 430);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(63, 29);
+            this.label7.TabIndex = 39;
+            this.label7.Text = "ملاحظات";
+            // 
             // Def
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(468, 541);
-            this.Controls.Add(this.button3);
+            this.ClientSize = new System.Drawing.Size(468, 550);
+            this.Controls.Add(this.txt_note);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label9);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.Label8);
-            this.Controls.Add(this.Button1);
             this.Controls.Add(this.TextBox3);
             this.Controls.Add(this.Label6);
             this.Controls.Add(this.TextBox2);
@@ -325,7 +349,8 @@
             this.Controls.Add(this.Label3);
             this.Controls.Add(this.Label2);
             this.Controls.Add(this.Label1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.Button1);
+            this.Controls.Add(this.button3);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Def";
             this.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -359,6 +384,8 @@
         internal System.Windows.Forms.TextBox textBox5;
         internal System.Windows.Forms.Label label10;
         internal System.Windows.Forms.Button button3;
+        internal System.Windows.Forms.TextBox txt_note;
+        internal System.Windows.Forms.Label label7;
     }
 }
 

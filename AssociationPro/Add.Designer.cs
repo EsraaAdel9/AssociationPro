@@ -64,6 +64,8 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label18 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txt_id = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -78,8 +80,6 @@
             this.comboBox10 = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.txt_id = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.defBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.empBindingSource1)).BeginInit();
@@ -499,6 +499,26 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "بيانات المنتفع";
             // 
+            // txt_id
+            // 
+            this.txt_id.Font = new System.Drawing.Font("Traditional Arabic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_id.Location = new System.Drawing.Point(51, 83);
+            this.txt_id.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_id.Name = "txt_id";
+            this.txt_id.Size = new System.Drawing.Size(250, 36);
+            this.txt_id.TabIndex = 44;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Traditional Arabic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(317, 86);
+            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(88, 29);
+            this.label20.TabIndex = 43;
+            this.label20.Text = "الرقم القومي :";
+            // 
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("Traditional Arabic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -611,6 +631,7 @@
             this.comboBox10.Font = new System.Drawing.Font("Traditional Arabic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox10.FormattingEnabled = true;
             this.comboBox10.Items.AddRange(new object[] {
+            "عدم وجود معيشة",
             "يوجد نشاط تجارى",
             "المساحة غير مطابقة",
             "عدد الادوار اكثر من دورين",
@@ -648,26 +669,6 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Visible = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // txt_id
-            // 
-            this.txt_id.Font = new System.Drawing.Font("Traditional Arabic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_id.Location = new System.Drawing.Point(51, 83);
-            this.txt_id.Margin = new System.Windows.Forms.Padding(2);
-            this.txt_id.Name = "txt_id";
-            this.txt_id.Size = new System.Drawing.Size(250, 36);
-            this.txt_id.TabIndex = 44;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Traditional Arabic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(317, 86);
-            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(88, 29);
-            this.label20.TabIndex = 43;
-            this.label20.Text = "الرقم القومي :";
             // 
             // Add
             // 

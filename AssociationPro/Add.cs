@@ -28,8 +28,7 @@ namespace AssociationPro
             comboBox8.SelectedIndex = -1;
             ComboBox1.Items.Clear();
 
-
-            foreach(DataRow dr in c.getProAssName().Rows)
+            foreach (DataRow dr in c.getProAssName().Rows)
             {
                 ComboBox1.Items.Add(dr[0].ToString());
             }
@@ -51,24 +50,26 @@ namespace AssociationPro
             textBox2.Text = "";
             textBox3.Text = "";
             textBox4.Text = "";
+            txt_id.Text = "";
             label15.Text = "";
             checkBox1.Checked = false;
             checkBox2.Checked = false;
             textBox5.Text = "";
             button3.Visible = false;
-            txt_id.Text = "";
         }
 
         private void comboBox6_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox6.SelectedIndex == 2)
+            if (comboBox6.SelectedIndex == 0)
             {
-                label11.Visible = true;
-                comboBox7.Visible = true;
-                button3.Visible = true;
                 label11.Visible = false;
                 comboBox7.Visible = false;
-                comboBox7.SelectedIndex = -1;
+                button3.Visible = false;
+
+                label19.Visible = false;
+                comboBox10.Visible = false;
+                comboBox10.SelectedIndex = -1;
+                button2.Visible = false;
 
                 //if (comboBox5.SelectedIndex== 0)
                 //{
@@ -85,29 +86,39 @@ namespace AssociationPro
                 //    label15.Text = " تم السماح بعمل عدد " + c.count(ComboBox1.Text, "مياه").ToString() + " توصيلة بقرار اللجنة من اصل " + c.waterNo(ComboBox1.Text) + "توصيلة مياه\r\nكما تم السماح بعمل عدد" + c.count(ComboBox1.Text, "صرف").ToString() + " توصيلة بقرار اللجنة من اصل " + c.sewerNo(ComboBox1.Text) + "توصيلة صرف";
                 //}
             }
-
             else if (comboBox6.SelectedIndex == 1)
-            {
-                label19.Visible = true;
-                comboBox10.Visible = true;
-                button2.Visible = true; 
-            }
-            else
             {
                 label11.Visible = false;
                 comboBox7.Visible = false;
-                comboBox7.SelectedIndex = -1;
                 button3.Visible = false;
+                label19.Visible = true;
+                comboBox10.Visible = true;
+                comboBox10.SelectedIndex = -1;
+                button2.Visible = true;
+            }
+            if (comboBox6.SelectedIndex == 2)
+            {
+                label11.Visible = true;
+                comboBox7.Visible = true;
+                button3.Visible = true;
                 label19.Visible = false;
                 comboBox10.Visible = false;
-                button2.Visible = false;
                 comboBox10.SelectedIndex = -1;
+                button2.Visible = false;
             }
+            //else
+            //{
+            //    label19.Visible = false;
+            //    comboBox10.Visible = false;
+            //    comboBox10.SelectedIndex = -1;
+            //    button2.Visible = false;
+               
+            //}
         }
         int y=0;
         private void Button1_Click(object sender, EventArgs e)
         {
-            if (ComboBox1.Text == "" || TextBox1.Text == "" || comboBox2.Text == "" || ComboBox3.Text == "" || comboBox4.Text == "" || comboBox5.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "" || comboBox9.Text == "" || comboBox6.Text == ""||textBox5.Text=="")
+            if (ComboBox1.Text == "" || TextBox1.Text == "" || txt_id.Text == "" || comboBox2.Text == "" || ComboBox3.Text == "" || comboBox4.Text == "" || comboBox5.Text == "" || textBox2.Text == "" || textBox3.Text == "" || textBox4.Text == "" || comboBox9.Text == "" || comboBox6.Text == ""||textBox5.Text=="")
             {
                 MessageBox.Show("برجاء ادخال جميع البيانات");
             }
@@ -135,54 +146,50 @@ namespace AssociationPro
                         {
                             y = 1;
                         }
-                        //}
-                        //else if (comboBox5.SelectedIndex == 1)
-                        //{
-                        //    if (c.count(ComboBox1.Text, comboBox5.Text) > c.sewerNo(ComboBox1.Text))
-                        //    {
-                        //        MessageBox.Show("تم تجاوز العدد المسموح به للتوصيل بقرار اللجنة لتوصيلات الصرف لهذه الجمعية");
-                        //    }
-                        //    else
-                        //    {
-                        //        y = 1;
-                        //    }
-                        //}
-                        //else
-                        //{
-                        //    if (c.count(ComboBox1.Text, comboBox5.Text) > c.sewerNo(ComboBox1.Text) || c.count(ComboBox1.Text, comboBox5.Text) > c.waterNo(ComboBox1.Text))
-                        //    {
-                        //        MessageBox.Show("تم تجاوز العدد المسموح به للتوصيل بقرار اللجنة للتوصيلات فى المياه او الصرف  لهذه الجمعية");
-                        //    }
-                        //    else
-                        //    {
-                        //        y = 1;
-                        //    }
-                        //}
-                        if (y == 1)
-                        {
-                            if (c.CheckCaseID(txt_id.Text) == 0)
-                            {
-                                int id = c.InsertCase(ComboBox1.Text, TextBox1.Text, ComboBox3.Text, comboBox2.Text, comboBox4.Text, textBox2.Text, float.Parse(textBox3.Text), int.Parse(textBox4.Text), comboBox5.Text, comboBox9.Text, comboBox8.Text, comboBox6.Text, comboBox7.Text, checkBox1.Checked, checkBox2.Checked, textBox5.Text, dateTimePicker1.Value, comboBox10.Text,txt_id.Text);
-                                if (AddPics.dtt.Rows.Count > 0)
-                                {
-                                    foreach (DataRow dr in AddPics.dtt.Rows)
-                                    {
-                                        c.InsertCase_image(int.Parse(dr[0].ToString()), id, 1);
-                                    }
-                                }
-                                if (AddPics.dtt2.Rows.Count > 0)
-                                {
-                                    foreach (DataRow dr in AddPics.dtt2.Rows)
-                                    {
-                                        c.InsertCase_image(int.Parse(dr[0].ToString()), id, 2);
-                                    }
-                                }
-                                MessageBox.Show("تم الادخال بنجاح");
-                                clear();
-                                y = 0;
-                            }
-                            else MessageBox.Show("الرقم القومي مسجل من قبل");
-                        }
+                    //}
+                    //else if (comboBox5.SelectedIndex == 1)
+                    //{
+                    //    if (c.count(ComboBox1.Text, comboBox5.Text) > c.sewerNo(ComboBox1.Text))
+                    //    {
+                    //        MessageBox.Show("تم تجاوز العدد المسموح به للتوصيل بقرار اللجنة لتوصيلات الصرف لهذه الجمعية");
+                    //    }
+                    //    else
+                    //    {
+                    //        y = 1;
+                    //    }
+                    //}
+                    //else
+                    //{
+                    //    if (c.count(ComboBox1.Text, comboBox5.Text) > c.sewerNo(ComboBox1.Text) || c.count(ComboBox1.Text, comboBox5.Text) > c.waterNo(ComboBox1.Text))
+                    //    {
+                    //        MessageBox.Show("تم تجاوز العدد المسموح به للتوصيل بقرار اللجنة للتوصيلات فى المياه او الصرف  لهذه الجمعية");
+                    //    }
+                    //    else
+                    //    {
+                    //        y = 1;
+                    //    }
+                    //}
+                    if (y == 1)
+                    {
+                   int id=c.InsertCase(ComboBox1.Text, TextBox1.Text, ComboBox3.Text, comboBox2.Text, comboBox4.Text, textBox2.Text, float.Parse(textBox3.Text), int.Parse(textBox4.Text), comboBox5.Text, comboBox9.Text, comboBox8.Text, comboBox6.Text, comboBox7.Text, checkBox1.Checked, checkBox2.Checked, textBox5.Text,dateTimePicker1.Value,comboBox10.Text,txt_id.Text);
+                   if (AddPics.dtt.Rows.Count > 0)
+                   {
+                       foreach (DataRow dr in AddPics.dtt.Rows)
+                       {
+                           c.InsertCase_image(int.Parse(dr[0].ToString()), id, 1);
+                       }
+                   }
+                   if (AddPics.dtt2.Rows.Count > 0)
+                   {
+                       foreach (DataRow dr in AddPics.dtt2.Rows)
+                       {
+                           c.InsertCase_image(int.Parse(dr[0].ToString()), id, 2);
+                       }
+                   }
+                        MessageBox.Show("تم الادخال بنجاح");
+                        clear();
+                        y = 0;
+                    }
                     }
                 }
             }

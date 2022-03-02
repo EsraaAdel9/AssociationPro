@@ -180,9 +180,17 @@ namespace AssociationPro
         }
 
 
-        public void InsertAssociaton(string name, string type, string gov, string center, string street, string chairman, string authorized, string phone_no)
+        //public void InsertAssociaton(string name, string type, string gov, string center, string street, string chairman, string authorized, string phone_no, string note)
+        //{
+        //    com = new SqlCommand(" INSERT INTO [associations].[dbo].[Def]([name],[type],[gov] ,[center] ,[street] ,[chairman],[authorized],[phone_no],note) values('" + name + "','" + type + "','" + gov + "','" + center + "','" + street + "','" + chairman + "','" + authorized + "','" + phone_no + "','" + note + "')", con);
+        //    com.CommandType = CommandType.Text;
+        //    con.Open();
+        //    com.ExecuteNonQuery();
+        //    con.Close();
+        //}
+        public void InsertAssociaton(string name, string type, string gov, string center, string street, string chairman, string authorized, string phone_no, string note)
         {
-            com = new SqlCommand(" INSERT INTO [associations].[dbo].[Def]([name],[type],[gov] ,[center] ,[street] ,[chairman],[authorized],[phone_no]) values(N'" + name + "',N'" + type + "',N'" + gov + "',N'" + center + "',N'" + street + "',N'" + chairman + "',N'" + authorized + "','" + phone_no + "')", con);
+            com = new SqlCommand(" INSERT INTO [associations].[dbo].[Def]([name],[type],[gov] ,[center] ,[street] ,[chairman],[authorized],[phone_no],note) values('" + name + "','" + type + "','" + gov + "','" + center + "','" + street + "','" + chairman + "','" + authorized + "','" + phone_no + "','" + note + "')", con);
             com.CommandType = CommandType.Text;
             con.Open();
             com.ExecuteNonQuery();
@@ -219,15 +227,23 @@ namespace AssociationPro
             con.Close();
         }
 
-        public void updateAss(string name,string type,string gov,string center,string street,string chairman ,string authorized,string phone_no )
+        //public void updateAss(string name,string type,string gov,string center,string street,string chairman ,string authorized,string phone_no )
+        //{
+        //    com = new SqlCommand(" update [Def]  SET type = N'" + type + "' , gov =N'" + gov + "', center = N'" + center + "' ,street = N'" + street + "' ,chairman = N'" + chairman + "',authorized = N'" + authorized + "' ,[phone_no] ='" + phone_no + "' where name= N'" + name + "'", con);
+        //    com.CommandType = CommandType.Text;
+        //    con.Open();
+        //    com.ExecuteNonQuery();
+        //    con.Close();
+        //}
+
+        public void updateAss(string name, string type, string gov, string center, string street, string chairman, string authorized, string phone_no, string note)
         {
-            com = new SqlCommand(" update [Def]  SET type = N'" + type + "' , gov =N'" + gov + "', center = N'" + center + "' ,street = N'" + street + "' ,chairman = N'" + chairman + "',authorized = N'" + authorized + "' ,[phone_no] ='" + phone_no + "' where name= N'" + name + "'", con);
+            com = new SqlCommand(" update [Def]  SET [type] = N'" + type + "',[gov] = N'" + gov + "',[center] = N'" + center + "',[street] = N'" + street + "',[chairman] = N'" + chairman + "',[authorized] = N'" + authorized + "',[phone_no] ='" + phone_no + "',[note] = N'" + note + "' where name= N'" + name + "'", con);
             com.CommandType = CommandType.Text;
             con.Open();
             com.ExecuteNonQuery();
             con.Close();
         }
-
 
         public void deleteCase(int id)
         {
@@ -523,7 +539,7 @@ namespace AssociationPro
 
         public void updateProtocal(string assName, int period,int conNo)
         {
-            com = new SqlCommand(" SET DATEFORMAT dmy update [protocol] set period = period+" + period + ",conNo="+conNo+",New='false' where assName='" + assName + "' and protocolDate in (SELECT MAX(protocolDate)  FROM [protocol] where assName='" + assName + "') SELECT SCOPE_IDENTITY() ", con);
+            com = new SqlCommand(" SET DATEFORMAT dmy update [protocol] set period = period+" + period + ",conNo="+conNo+",New='false' where assName=N'" + assName + "' and protocolDate in (SELECT MAX(protocolDate)  FROM [protocol] where assName='" + assName + "') SELECT SCOPE_IDENTITY() ", con);
             com.CommandType = CommandType.Text;
             con.Open();
             com.ExecuteNonQuery();
