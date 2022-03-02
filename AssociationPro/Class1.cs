@@ -198,7 +198,28 @@ namespace AssociationPro
         }
         public int InsertCase(string ass_name, string case_name, string center, string section, string village, string street, float area, int no_floors, string con_type, string F_emp, string S_emp, string decision, string comm_decision, bool Rec, bool paid, string account, DateTime scanDate,string reason,string txtID)
         {
-            com = new SqlCommand("SET DATEFORMAT dmy  INSERT INTO [associations].[dbo].[cases]([ass_name],[case_name],[center],[section],[village],[street],[area],[no_floors],[con_type],[F_emp],[S_emp],[decision],[comm_decision],Recommended,paid,account_no,scanDate,commRefuseReason,case_id) values(N'" + ass_name + "',N'" + case_name + "',N'" + center + "',N'" + section + "',N'" + village + "','" + street + "'," + area + "," + no_floors + ",N'" + con_type + "',N'" + F_emp + "',N'" + S_emp + "',N'" + decision + "','" + comm_decision + "','" + Rec + "','" + paid + "','" + account + "','" + scanDate + "',N'" + reason + "','" + txtID + "')  SELECT SCOPE_IDENTITY()", con);
+            com = new SqlCommand(" INSERT INTO [associations].[dbo].[cases]([ass_name],[case_name],[center],[section],[village],[street],[area],[no_floors],[con_type],[F_emp],[S_emp],[decision],[comm_decision],Recommended,paid,account_no,scanDate,commRefuseReason,case_id) values " +
+                "(@ass_name,@case_name,@center,@section,@village,@street,@area,@no_floors,@con_type,@F_emp,@S_emp,@decision," +
+                "@comm_decision,@Recommended,@paid,@account_no,@scanDate,@commRefuseReason,@case_id) SELECT SCOPE_IDENTITY()", con);
+            com.Parameters.Add(new SqlParameter("ass_name", ass_name));
+            com.Parameters.Add(new SqlParameter("case_name", case_name));
+            com.Parameters.Add(new SqlParameter("center", center));
+            com.Parameters.Add(new SqlParameter("section", section));
+            com.Parameters.Add(new SqlParameter("village", village));
+            com.Parameters.Add(new SqlParameter("street", street));
+            com.Parameters.Add(new SqlParameter("area", area));
+            com.Parameters.Add(new SqlParameter("no_floors", no_floors));
+            com.Parameters.Add(new SqlParameter("con_type", con_type));
+            com.Parameters.Add(new SqlParameter("F_emp", F_emp));
+            com.Parameters.Add(new SqlParameter("S_emp", S_emp));
+            com.Parameters.Add(new SqlParameter("decision", decision));
+            com.Parameters.Add(new SqlParameter("comm_decision", comm_decision));
+            com.Parameters.Add(new SqlParameter("Recommended", Rec));
+            com.Parameters.Add(new SqlParameter("paid", paid));
+            com.Parameters.Add(new SqlParameter("account_no", account));
+            com.Parameters.Add(new SqlParameter("scanDate", scanDate));
+            com.Parameters.Add(new SqlParameter("commRefuseReason", reason));
+            com.Parameters.Add(new SqlParameter("case_id", txtID));
             com.CommandType = CommandType.Text;
             con.Open();
             int x= int.Parse(com.ExecuteScalar().ToString());
@@ -529,7 +550,13 @@ namespace AssociationPro
         public void insertProtocal(string assName,DateTime protocolDate,int period,int conNo, Image image)
         {
             byte[] bytes = (byte[])(new ImageConverter()).ConvertTo(image, typeof(byte[]));
-            com = new SqlCommand(" SET DATEFORMAT dmy insert into  [protocol](assName,protocolDate,period,conNo,New,image) values( N'" + assName + "','" + protocolDate + "'," + period + "," + conNo + ",'true',@image)", con);
+            com = new SqlCommand("insert into  protocol (assName,protocolDate,period,conNo,New,image) values (@assName,@protocolDate,@period,@conNo,@New,@image)", con);
+            //com = new SqlCommand(" SET DATEFORMAT dmy insert into  [protocol](assName,protocolDate,period,conNo,New,image) values( N'" + assName + "','" + protocolDate + "'," + period + "," + conNo + ",'true',@image)", con);
+            com.Parameters.Add(new SqlParameter("@assName", assName));
+            com.Parameters.Add(new SqlParameter("@protocolDate", protocolDate));
+            com.Parameters.Add(new SqlParameter("@period", period));
+            com.Parameters.Add(new SqlParameter("@conNo", conNo));
+            com.Parameters.Add(new SqlParameter("@New", "1"));
             com.Parameters.Add("@image", SqlDbType.VarBinary).Value = bytes;
             com.CommandType = CommandType.Text;
             con.Open();
